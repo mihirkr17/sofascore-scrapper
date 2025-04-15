@@ -1,0 +1,26 @@
+{
+  "name": "sofascore-scrapper",
+  "version": "1.0.0",
+  "main": "app.js",
+  "type": "commonjs",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node app.js",
+    "upcoming": "node upcoming_action.js",
+    "event_details": "node event_details_action.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "dependencies": {
+    "axios": "^1.8.4",
+    "dotenv": "^16.5.0",
+    "mongodb": "^6.15.0",
+    "mongoose": "^8.13.2",
+    "puppeteer": "^24.6.1",
+    "puppeteer-core": "^24.6.1",
+    "puppeteer-extra": "^3.3.6",
+    "puppeteer-extra-plugin-stealth": "^2.11.2"
+  }
+}

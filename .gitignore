@@ -1,0 +1,6 @@
+/node_modules/
+.env
+failed_fb_ids.json
+success_fb_ids.json
+football_teams.json
+tn_data.json
