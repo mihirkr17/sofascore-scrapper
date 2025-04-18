@@ -1,4 +1,4 @@
-const { scrapeTennisEventDetails, scrapeTeamLogo } = require("./src/classes/class-scrapper");
+const { scrapeTennisEventDetails, scrapeTeamLogo, scrapeSofaScoreTeamDetails } = require("./src/classes/class-scrapper");
 const fs = require("fs");
 
 function strToTime(isoString) {
@@ -119,14 +119,9 @@ function getRecentFormPredictionText(tnData, p1Name, p2Name) {
 async function main() {
    try {
 
-      const d = await scrapeTeamLogo([
-         {
-            id: 2817,
-            sport: "football"
-         }
-      ]);
+      const d = await scrapeSofaScoreTeamDetails();
 
-      console.log(d);
+      await fs.promises.writeFile("cricket_teams.json", JSON.stringify(d));
 
       return;
       // const tnData = require("./tn_data.json");
